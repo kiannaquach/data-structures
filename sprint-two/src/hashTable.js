@@ -17,23 +17,22 @@ HashTable.prototype.insert = function(k, v) {
 
 
   // isFound will be updated
-  var updateTuple = false;
+  var isFound = false;
 
   // iterate through bucket
   for (var i = 0; i < bucket.length; i++) {
     // look at that bucket's tuple
     // check to see bucket's tuple is same as key provided
     if (bucket[i][0] === k) {
-      debugger;
       // set that tuple at index 1 to the value
       bucket[i][1] = v;
-      // update updateTuple 
-      updateTuple = true;
+      // update isFound 
+      isFound = true;
     }
   }
   
-  // if that k,v is found
-  if (!updateTuple) {
+  // if that key is not found
+  if (!isFound) {
     // push the tuple into bucket
     bucket.push([k, v]); 
   }

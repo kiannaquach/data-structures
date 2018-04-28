@@ -53,7 +53,6 @@ bstMethods.contains = function(target) {
     }
   }
   
-
 };
 
 
